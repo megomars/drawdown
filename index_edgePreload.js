@@ -45,7 +45,7 @@ if(document.addEventListener ){
 
    requiresSVG=false;
 
-   doDelayLoad=false;
+   doDelayLoad=true;
    htFallbacks={
    };
 
@@ -59,9 +59,17 @@ if (AdobeEdge.bootstrapLoading) { signaledLoading = true; AdobeEdge.loadResource
 
 loadResources(aLoader, doDelayLoad);
 
-var plSTF="none",ctrPlS="none",minPlW="0",maxPlW=undefined,plWidth="550px",plHeight="400px";
+var plSTF="width",ctrPlS="horizontal",minPlW="0",maxPlW=undefined,plWidth="1000px",plHeight="750px";
 
-preContent={dom: [ ]};//simpleContent
+preContent={
+    dom: [
+    {
+        id: 'loader-bar',
+        type: 'image',
+        tag: 'img',
+        rect: ['390', '89px','220px','19px','auto', 'auto'],
+        fill: ["rgba(0,0,0,0)",'images/loader-bar.gif','0px','0px']
+    }]};//simpleContent
 
 dlContent={dom: [ ]};//simpleContent
 
